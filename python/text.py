@@ -1,0 +1,20 @@
+from customtkinter import *
+app = CTk()
+app.geometry('500x400')
+app.resizable(False, False)
+app.title('login page')
+app.config(bg='orange')
+tabview = CTkTabview(master=app)
+
+tabview.place(relx = 0.4, rely =0.5, anchor='center')
+
+tabview.add('tab 1')
+tabview.add('tab 2')
+tabview.add('tab 3')
+label_1 = CTkLabel(master=tabview.tab('tab 1'), text='tab 1',font=('arial',34), fg_color='purple')
+label_1.pack(padx=20, pady=20)
+label_2 = CTkLabel(master=tabview.tab('tab 2'), text='tab 2',font=('arial',34), fg_color='purple')
+label_2.pack(padx=20, pady=20)
+label_3 = CTkLabel(master=tabview.tab('tab 3'), text='tab 3',font=('arial',34), fg_color='purple')
+label_3.pack(padx=20, pady=20)
+app.mainloop()
